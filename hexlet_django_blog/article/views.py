@@ -1,14 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.views import View
+from django.http import Http404
 from django.views.decorators.http import require_http_methods
-
-# Create your views here.
-# class ArticleView(View):
-
-#     def get(self, *args, **kwargs):
-#         return HttpResponse('Articles')
-
+# from .models import Article
 
 def index(request, tags, article_id):
     return render(
