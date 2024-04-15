@@ -4,15 +4,18 @@ from django.views import View
 from django.views.decorators.http import require_http_methods
 
 # Create your views here.
-class ArticleView(View):
+# class ArticleView(View):
 
-    def get(self, *args, **kwargs):
-        return HttpResponse('Articles')
+#     def get(self, *args, **kwargs):
+#         return HttpResponse('Articles')
 
 
-# def index(request):
-#     return render(
-#         request,
-#         'articles/index.html',
-#         context={'app': 'article'},
-#     )
+def index(request, tags, article_id):
+    return render(
+        request,
+        'articles/index.html',
+        context={
+            'tags': tags,
+            'article_id': article_id,
+            }
+    )
