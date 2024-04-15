@@ -11,6 +11,8 @@ from django.views.generic.base import TemplateView
 #         context = super().get_context_data(**kwargs)
 #         context['who'] = 'World'
 #         return context
+
+
 def index(request):
     return redirect('article', tags='python', article_id=42)
 
