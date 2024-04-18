@@ -14,7 +14,7 @@ from django.views.generic.base import TemplateView
 
 
 def index(request):
-    return redirect('article', tags='python', article_id=42)
+    return render(request, 'base.html')
 
 
 def about(request):
